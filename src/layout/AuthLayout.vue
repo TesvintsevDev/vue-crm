@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <app-message/>
+    <app-message />
     <router-view />
   </div>
 </template>
 
 <script>
-import AppMessage from '../components/ui/AppMessage.vue'
+import AppMessage from '../components/ui/AppMessage'
 export default {
   components: {AppMessage}
 

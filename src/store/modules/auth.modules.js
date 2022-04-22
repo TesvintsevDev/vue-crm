@@ -43,7 +43,7 @@ export default {
       return state.token;
     },
     isAuthenticated(_, getters) {
-      return !!getters.token;
+      return !!getters.token
     },
   },
 };

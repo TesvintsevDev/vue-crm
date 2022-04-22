@@ -4,7 +4,7 @@
       <button class="btn primary" @click="modal = true">Создать</button>
     </template>
     
-    <rquest-table :requests="[]"></rquest-table>
+    <request-table :requests="requests"></request-table>
 
 
     <teleport to="body">
@@ -16,21 +16,27 @@
 </template>
 
 <script>
-import {ref} from 'vue'
-import AppPage from '../components/ui/AppPage.vue'
-import RquestTable from '../components/request/RequestTable.vue'
-import AppModal from '../components/ui/AppModal.vue'
-import RequestModal from '../components/request/RequestModal.vue'
+import {ref, computed} from 'vue'
+import { useStore } from 'vuex'
+import AppPage from '../components/ui/AppPage'
+import RequestTable from '../components/request/RequestTable'
+import AppModal from '../components/ui/AppModal'
+import RequestModal from '../components/request/RequestModal'
 
 export default {
   setup() {
-    const modal = ref(false) 
+    const store = useStore()
+    const modal = ref(false)
+
+    const requests = computed( () => store.getters['request/requests'])
 
     return {
-      modal,
-      close: () => modal.value = false
+      modal, requests,
+      // close: () => modal.value = false
     }
   },
-  components: {AppPage, RquestTable, AppModal, RequestModal}
+  components: {
+    AppPage, RequestTable, AppModal, RequestModal
+    }
 }
 </script>
