@@ -21,6 +21,15 @@ const routes = [
       auth: true
     }
   },
+{
+  path: '/request/:id',
+  name: 'Request',
+  component: () => import('../views/Request.vue'),
+  meta: {
+    Layout: 'main',
+    auth: true
+  }
+},
   {
     path: '/auth',
     name: 'Auth',
