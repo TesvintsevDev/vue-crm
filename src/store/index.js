@@ -12,7 +12,8 @@ export default createStore({
   plugins,
   state() {
     return {
-      message: null
+      message: null,
+      sidebar: false
     }
   },
   mutations: {
@@ -21,6 +22,12 @@ export default createStore({
     },
     clearMessage(state) {
       state.message = null
+    },
+    openSidebar(state) {
+      state.sidebar = true
+    },
+    closeSidebar(state) {
+      state.sidebar = false
     }
   },
   actions: {
