@@ -40,7 +40,3 @@ export default {
     components: {AppStatus}
 }
 </script>
-
-<style>
-
-</style>
