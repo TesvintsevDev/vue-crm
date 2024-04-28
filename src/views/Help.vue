@@ -25,3 +25,7 @@ export default {
   components: {AppPage, QuestionItem}
 }
 </script>
+
+<style>
+
+</style>

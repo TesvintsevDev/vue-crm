@@ -16,3 +16,7 @@ export default {
     components: {TheNavbar, AppMessage, TheSidebar}
 }
 </script>
+
+<style>
+
+</style>

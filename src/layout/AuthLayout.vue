@@ -9,5 +9,11 @@
 import AppMessage from '../components/ui/AppMessage'
 export default {
   components: {AppMessage}
+
 }
+
 </script>
+
+<style scoped>
+
+</style>
